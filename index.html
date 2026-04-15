@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Document Metadata -->
+    <title>Team Potato Kickoff – Meeting Minutes</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Meeting minutes for Team Potato Kickoff brainstorm session." />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <h1>Team Potato Kickoff</h1>
+      <h2>Topic: Kickoff + Brainstorming</h2>
+      <h3>Date: April 13, 2026</h3>
+      <nav>
+        <ul>
+          <li><a href="#attendance">Attendance</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#new-business">New Business</a></li>
+          <li><a href="#misc">Miscellaneous</a></li>
+          <li><a href="#media">Media &amp; Recordings</a></li>
+          <li><a href="#form">Feedback Form</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- ATTENDANCE -->
+      <section id="attendance">
+        <h2>Attendance</h2>
+        <ul>
+          <li><strong>Arav V.</strong> – Team Lead</li>
+          <li><em>Yuting D.</em> – Team Lead</li>
+          <li>Diana K. – Back-End Developer</li>
+          <li>Ryan L. – Designer</li>
+        </ul>
+        <p><b>Facilitator:</b> Yuting D. &nbsp; <b>Note-Taker:</b> Arav V.</p>
+      </section>
+
+      <hr />
+
+      <!-- AGENDA -->
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Create team contract</li>
+          <li>Discuss expectations</li>
+          <li>Create team identity</li>
+          <li>Delegate tasks for upcoming assignment</li>
+          <li>Set next meeting date</li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <!-- NEW BUSINESS -->
+      <section id="new-business">
+        <h2>New Business</h2>
+        <p>Topics <strong>introduced for the first time</strong> this meeting:</p>
+        <ul>
+          <li>
+            <details>
+              <summary>Team identity</summary>
+              <p>
+                Since our team name is "Potatoes" we decided to create a cute potato logo.
+                We came up with four drafts before deciding on one. Ethan was tasked with making
+                our team intro video and gave us the task of recording ourselves saying "I am ____"
+                to compile into the video.
+              </p>
+            </details>
+          </li>
+          <li>Arav created the team organization and repo on github. This is where all of our progress
+            will be tracked.
+          </li>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- MISCELLANEOUS -->
+      <section id="misc">
+        <h2>Miscellaneous Comments / Questions / Concerns</h2>
+        <p>
+          Diana asked whether we need <i>dark mode</i> support from day one.<br />
+          The team agreed to defer this to a later sprint.<br />
+          Arav reminded everyone to push commits to feature branches, <b>not</b> directly to <code>main</code>.
+        </p>
+        <div>
+          <!-- div included as required; acts as a generic grouping wrapper here -->
+          <p>
+            Action items from miscellaneous discussion are tracked in the
+            <span>the slack</span>.
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- DIAGRAMS & MEDIA -->
+      <section id="media">
+        <h2>Media &amp; Recordings</h2>
+
+        <!-- Whiteboard / Diagram Image -->
+        <h3>Potential Logo Idea</h3>
+        <figure>
+          <img
+            src="screenshots\cutie.png"
+            alt="cute potato logo"
+            width="300"
+          />
+        </figure>
+
+        <!-- Audio Recording -->
+        <h3>Audio Recording (Make Sure to Lower the Volume)</h3>
+        <audio controls>
+          <source src="FemurBreakerSound.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <br>
+        I'm Sorry
+
+        <!-- Video Recording -->
+        <h3>Our Team Intro!!!</h3>
+        <video controls width="600">
+          <source src="teamintro.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+
+      </section>
+
+      <hr />
+
+      <!-- FEEDBACK FORM (not related to meeting minutes, required by assignment) -->
+      <section id="form">
+        <h2>Team Feedback Form</h2>
+        <p>Please fill out this quick form after each meeting!</p>
+
+        <form action="#" method="post">
+
+          <fieldset>
+            <legend>Your Information</legend>
+
+            <label for="name">Full Name:</label><br />
+            <input type="text" id="name" name="name" placeholder="e.g. Jordan M." /><br /><br />
+
+            <label for="meeting-date">Meeting Date:</label><br />
+            <input type="date" id="meeting-date" name="meeting-date" /><br /><br />
+
+            <label for="role">Your Role:</label><br />
+            <input type="text" id="role" name="role" list="role-options" placeholder="Start typing..." /><br />
+            <datalist id="role-options">
+              <option value="Team Lead" />
+              <option value="Front-End Developer" />
+              <option value="Back-End Developer" />
+              <option value="Designer" />
+              <option value="QA Engineer" />
+            </datalist>
+
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Meeting Rating</legend>
+            <p>How productive was this meeting?</p>
+            <label><input type="radio" name="rating" value="very-productive" /> Very Productive</label><br />
+            <label><input type="radio" name="rating" value="somewhat-productive" /> Somewhat Productive</label><br />
+            <label><input type="radio" name="rating" value="not-productive" /> Not Productive</label>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Topics Discussed (check all that apply)</legend>
+            <label><input type="checkbox" name="topics" value="requirements" /> Project Requirements</label><br />
+            <label><input type="checkbox" name="topics" value="design" /> Design</label><br />
+            <label><input type="checkbox" name="topics" value="tech-stack" /> Tech Stack</label><br />
+            <label><input type="checkbox" name="topics" value="deadlines" /> Deadlines</label>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Your Preferred Communication Channel</legend>
+            <label for="comm-channel">Select one:</label><br />
+            <select id="comm-channel" name="comm-channel">
+              <option value="">-- Choose --</option>
+              <option value="slack">Slack</option>
+              <option value="discord">Discord</option>
+              <option value="email">Email</option>
+              <option value="sms">SMS</option>
+            </select>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Additional Comments</legend>
+            <label for="comments">Anything else to share?</label><br />
+            <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Your feedback here..."></textarea>
+          </fieldset>
+
+          <br />
+          <button type="submit">Submit Feedback</button>
+          <button type="reset">Clear Form</button>
+
+        </form>
+      </section>
+
+    </main>
+
+    <hr />
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Minutes recorded by <strong>Arav V.</strong> &mdash;
+        <em>Potatoes</em> &mdash; Spring 2026
+      </p>
+    </footer>
+
+  </body>
+</html>

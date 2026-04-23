@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+/* ================================================================
+   CSS Variables — reusable values with fallbacks
+   ================================================================ */
+:root {
+  --primary-color: #1a2e5e;
+  --accent-color: hsl(30, 100%, 50%);
+  --bg-surface: rgb(240, 248, 255);
+  --text-color: #333333;
+}
+
+/* Universal selector — applied to every element */
+* {
+  box-sizing: border-box;
+}
+
+/* ================================================================
+   Body
+   ================================================================ */
+body {
+  background-color: lightblue;                       /* color name */
+  color: var(--text-color, #555555);                 /* CSS variable + fallback */
+  font-size: 1rem;                                   /* relative unit: rem */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================================================
+   Header — sticky positioning, longhand border, longhand padding
+   ================================================================ */
+header {
+  position: sticky;                                  /* position: sticky */
+  top: 0;
+  z-index: 100;
+  background-color: var(--primary-color, navy);      /* variable + fallback */
+  color: #ffffff;                                    /* hex code */
+  padding-top: 16px;                                 /* padding longhand */
+  padding-right: 30px;
+  padding-bottom: 16px;
+  padding-left: 30px;
+  border-style: solid;                               /* border-style (longhand) */
+  border-color: hsl(30, 100%, 50%);                  /* border-color, hsl() */
+  border-width: 0 0 4px 0;                           /* border-width */
+  border-radius: 0;                                  /* border-radius */
+}
+
+/* ================================================================
+   Headings
+   ================================================================ */
+h1 {
+  color: #ffffff;
+  margin: 0 0 6px 0;                                 /* margin shorthand */
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  color: rgb(200, 220, 255);                         /* rgb() */
+  margin-top: 0;                                     /* margin longhand */
+  margin-right: 0;
+  margin-bottom: 4px;
+  margin-left: 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+h3 {
+  color: rgba(255, 255, 255, 0.85);                  /* rgba() */
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* ================================================================
+   Navigation
+   ================================================================ */
+nav {
+  margin-top: 12px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+nav ul {
+  display: flex;                                     /* flexbox — 6 li children */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;                             /* display: inline-block */
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+nav ul li a:hover {                                  /* pseudo-class: :hover */
+  background-color: hsla(0, 0%, 100%, 0.2);          /* hsla() */
+  text-decoration: underline;
+}
+
+nav ul li a:active {                                 /* pseudo-class: :active */
+  background-color: hsla(0, 0%, 100%, 0.4);
+}
+
+/* ================================================================
+   Main Container — max/min-width, margin auto, shorthand padding
+   ================================================================ */
+main {
+  max-width: 900px;                                  /* max-width */
+  min-width: 320px;                                  /* min-width */
+  width: 90%;                                        /* width, relative unit: % */
+  margin: 20px auto;                                 /* margin auto */
+  padding: 24px 32px;                                /* padding shorthand */
+  background-color: #ffffff;
+  border: 1px solid color-mix(in srgb, navy 30%, lightblue 70%); /* border shorthand + color-mix() */
+  border-radius: 8px;
+}
+
+/* ================================================================
+   HR Dividers — wider-gamut color()
+   ================================================================ */
+hr {
+  border: none;
+  height: 2px;
+  background-color: color(srgb 0.6 0.75 0.9);        /* color() wider-gamut */
+  margin: 0;
+}
+
+/* ================================================================
+   Sections — relative positioning, margin longhand
+   ================================================================ */
+section {
+  position: relative;                                /* position: relative */
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 28px;
+  margin-left: 0;
+  min-height: 1cm;                                   /* absolute unit: cm */
+}
+
+section h2 {
+  color: var(--primary-color, navy);
+  text-align: left;
+  text-decoration: none;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 8px;
+  padding-left: 0;
+  border-bottom: 2px solid var(--accent-color, orange); /* border shorthand */
+}
+
+/* ================================================================
+   Attendance List
+   ================================================================ */
+#attendance ul {
+  display: grid;                                     /* grid — 4 li children */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 6px 32px;
+  align-items: start;
+  list-style: none;
+  padding: 0;
+}
+
+#attendance li {
+  margin-top: 6px;
+  margin-right: 0;
+  margin-bottom: 6px;
+  margin-left: 0;
+}
+
+/* ================================================================
+   Details / Summary
+   ================================================================ */
+details {
+  border-style: solid;
+  border-color: hsl(210, 50%, 70%);
+  border-width: 1px;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 0 0 10px 0;
+  background-color: hsl(210, 50%, 97%);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--primary-color, navy);
+}
+
+summary:hover {
+  color: var(--accent-color, orange);
+  text-decoration: underline;
+}
+
+summary:active {
+  color: hsl(0, 70%, 40%);
+}
+
+/* ================================================================
+   Code Inline Element
+   ================================================================ */
+code {
+  display: inline;                                   /* display: inline */
+  background-color: hsl(0, 0%, 94%);
+  padding: 2px 5px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-radius: 3px;
+  font-size: 0.9em;                                  /* relative unit: em */
+}
+
+/* ================================================================
+   Media — figure, img, audio, video
+   ================================================================ */
+figure {
+  margin: 0 auto 16px auto;
+  text-align: center;
+}
+
+figure img {
+  width: 300px;                                      /* width, absolute unit: px */
+  height: auto;                                      /* height */
+  max-width: 100%;
+  border-style: solid;
+  border-color: rgb(180, 200, 230);                  /* rgb() */
+  border-width: 3px;
+  border-radius: 8px;
+}
+
+audio {
+  display: block;                                    /* display: block */
+  width: 100%;
+  margin: 10px 0;
+}
+
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+/* ================================================================
+   Form Elements
+   ================================================================ */
+form {
+  max-width: 560px;
+}
+
+fieldset {
+  border-style: solid;
+  border-color: hsl(210, 40%, 75%);
+  border-width: 2px;
+  border-radius: 8px;
+  padding-top: 12px;                                 /* padding longhand */
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  margin: 0 0 16px 0;
+}
+
+legend {
+  color: var(--primary-color, navy);
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+label {
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  height: 36px;                                      /* height, px */
+  padding: 6px 10px;
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-width: 1px;
+  border-radius: 4px;
+  font-size: 11pt;                                   /* absolute unit: pt */
+  box-sizing: border-box;
+}
+
+select {
+  width: 200px;
+  padding: 6px 10px;
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-width: 1px;
+  border-radius: 4px;
+  font-size: 11pt;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  min-width: 200px;
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 11pt;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color, navy);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-style: none;
+  border-width: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11pt;
+  margin: 0 8px 0 0;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(225, 60%, 35%);
+}
+
+button[type="submit"]:active {
+  background-color: hsl(225, 60%, 25%);
+}
+
+button[type="reset"] {
+  background-color: rgb(220, 220, 220);
+  color: var(--text-color, #333333);
+  padding: 10px 24px;
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-width: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11pt;
+}
+
+button[type="reset"]:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+/* ================================================================
+   Footer
+   ================================================================ */
+footer {
+  background-color: var(--primary-color, navy);
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 30px;
+  border-top: 4px solid var(--accent-color, orange); /* border shorthand */
+}
+
+/* ================================================================
+   Selector Showcase
+   ================================================================ */
+
+/* Class selector */
+.meta {
+  font-size: 0.85em;
+  color: hsl(0, 0%, 42%);
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed hsl(0, 0%, 82%);
+}
+
+/* Combining element + class */
+p.meta {
+  font-style: italic;
+}
+
+/* Child combinator — direct section children of main */
+main > section {
+  padding-left: 6px;
+}
+
+/* Adjacent sibling combinator — p directly after legend */
+legend + p {
+  margin-top: 4px;
+  font-size: 0.9em;
+}
+
+/* General sibling combinator — any p after h2 in the same parent */
+h2 ~ p {
+  line-height: 1.75;
+}
+
+/* :has() — highlight the fieldset that contains radio inputs */
+fieldset:has(input[type="radio"]) {
+  background-color: hsl(210, 60%, 98%);
+}
+
+/* Nested selectors — style children of #new-business with nesting */
+#new-business {
+  & ul {
+    padding-left: 1.2em;
+  }
+
+  & li {
+    margin-bottom: 8px;
+  }
+}
+
+/* ================================================================
+   Media Queries — tablet (≤768px) and phone (≤480px)
+   ================================================================ */
+
+/* Tablet: reduce spacing, collapse select to full width */
+@media (max-width: 768px) {
+  header {
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 20px 24px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+/* Phone: single-column layout, tighter padding, stacked buttons */
+@media (max-width: 480px) {
+  header {
+    padding-top: 10px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* collapse attendance grid to single column */
+  #attendance ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  nav ul {
+    gap: 4px;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+  }
+
+  button[type="submit"],
+  button[type="reset"] {
+    display: block;
+    width: 100%;
+    margin: 4px 0;
+  }
+}

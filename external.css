@@ -10,6 +10,11 @@
   --text-color: #333333;
 }
 
+/* Universal selector — applied to every element */
+* {
+  box-sizing: border-box;
+}
+
 /* ================================================================
    Body
    ================================================================ */
@@ -365,6 +370,56 @@ footer {
   text-align: center;
   padding: 16px 30px;
   border-top: 4px solid var(--accent-color, orange); /* border shorthand */
+}
+
+/* ================================================================
+   Selector Showcase
+   ================================================================ */
+
+/* Class selector */
+.meta {
+  font-size: 0.85em;
+  color: hsl(0, 0%, 42%);
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed hsl(0, 0%, 82%);
+}
+
+/* Combining element + class */
+p.meta {
+  font-style: italic;
+}
+
+/* Child combinator — direct section children of main */
+main > section {
+  padding-left: 6px;
+}
+
+/* Adjacent sibling combinator — p directly after legend */
+legend + p {
+  margin-top: 4px;
+  font-size: 0.9em;
+}
+
+/* General sibling combinator — any p after h2 in the same parent */
+h2 ~ p {
+  line-height: 1.75;
+}
+
+/* :has() — highlight the fieldset that contains radio inputs */
+fieldset:has(input[type="radio"]) {
+  background-color: hsl(210, 60%, 98%);
+}
+
+/* Nested selectors — style children of #new-business with nesting */
+#new-business {
+  & ul {
+    padding-left: 1.2em;
+  }
+
+  & li {
+    margin-bottom: 8px;
+  }
 }
 
 /* ================================================================

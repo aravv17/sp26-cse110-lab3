@@ -137,9 +137,9 @@ main {
    HR Dividers — wider-gamut color()
    ================================================================ */
 hr {
-  border: none;
-  height: 2px;
-  background-color: color(srgb 0.6 0.75 0.9);        /* color() wider-gamut */
+  border-style: solid;
+  border-color: color(srgb 0.6 0.75 0.9);            /* color() wider-gamut */
+  border-width: 1px 0 0 0;
   margin: 0;
 }
 
